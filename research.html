@@ -3,90 +3,550 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Research | Md. Shoab Alam</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
 
-    <!-- Navigation -->
-    <nav class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-6 py-4">
+<!-- ================= NAVIGATION ================= -->
+<nav class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
 
-            <div class="flex justify-between items-center">
+    <div class="max-w-6xl mx-auto px-6 py-4">
 
-                <a href="index.html"
-                   class="text-2xl font-serif font-bold text-green-900 tracking-tight">
-                    Md. Shoab Alam
-                </a>
+        <div class="flex justify-between items-center">
 
-                <div class="hidden md:flex space-x-8 text-sm font-medium">
-                    <a href="index.html"
-                       class="text-gray-600 hover:text-green-900 transition">
-                        Home
-                    </a>
+            <a href="index.html"
+               class="text-2xl font-serif font-bold text-green-900 tracking-tight">
+                Md. Shoab Alam
+            </a>
 
-                    <a href="about.html"
-                       class="text-gray-600 hover:text-green-900 transition">
-                        About
-                    </a>
-
-                    <a href="experience.html"
-                       class="text-gray-600 hover:text-green-900 transition">
-                        Experience
-                    </a>
-
-                    <a href="research.html"
-                       class="text-green-900 font-semibold transition">
-                        Research
-                    </a>
-
-                    <a href="teaching.html"
-                       class="text-gray-600 hover:text-green-900 transition">
-                        Teaching
-                    </a>
-
-                    <a href="contact.html"
-                       class="px-5 py-2 bg-green-900 text-white rounded hover:bg-green-800 transition">
-                        Contact
-                    </a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn"
-                        class="md:hidden text-gray-600 focus:outline-none hover:text-green-900"
-                        aria-label="Open mobile menu">
-
-                    <svg class="w-6 h-6"
-                         fill="none"
-                         stroke="currentColor"
-                         viewBox="0 0 24 24"
-                         xmlns="http://www.w3.org/2000/svg">
-
-                        <path stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M4 6h16M4 12h16M4 18h16">
-                        </path>
-
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobile-menu"
-                 class="hidden md:hidden mt-4 border-t border-gray-100 pt-4 pb-2 space-y-2">
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
 
                 <a href="index.html"
-                   class="block py-2 text-gray-600 hover:text-green-900 hover:bg-gray-50 rounded px-2 transition">
+                   class="text-gray-600 hover:text-green-900 transition">
                     Home
                 </a>
 
                 <a href="about.html"
-                   class="block py-2 text-gray-600 hover:text-green-900 hover:bg-gray-50 rounded px-2 transition">
+                   class="text-gray-600 hover:text-green-900 transition">
                     About
                 </a>
 
                 <a href="experience.html"
-                   class="block py-2 text-gray-600 hover:text-green-900 hover:bg-gray-50 rounded px-2 transition">
-                   
+                   class="text-gray-600 hover:text-green-900 transition">
+                    Experience
+                </a>
+
+                <a href="research.html"
+                   class="text-green-900 font-semibold">
+                    Research
+                </a>
+
+                <a href="teaching.html"
+                   class="text-gray-600 hover:text-green-900 transition">
+                    Teaching
+                </a>
+
+                <a href="contact.html"
+                   class="px-5 py-2 bg-green-900 text-white rounded hover:bg-green-800 transition">
+                    Contact
+                </a>
+
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn"
+                    class="md:hidden text-gray-600 focus:outline-none">
+
+                <svg class="w-6 h-6"
+                     fill="none"
+                     stroke="currentColor"
+                     viewBox="0 0 24 24">
+
+                    <path stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+
+                </svg>
+
+            </button>
+
+        </div>
+
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu"
+             class="hidden md:hidden mt-4 border-t border-gray-100 pt-4 pb-2 space-y-2">
+
+            <a href="index.html"
+               class="block py-2 text-gray-600 hover:text-green-900 hover:bg-gray-50 rounded px-2">
+                Home
+            </a>
+
+            <a href="about.html"
+               class="block py-2 text-gray-600 hover:text-green-900 hover:bg-gray-50 rounded px-2">
+                About
+            </a>
+
+            <a href="experience.html"
+               class="block py-2 text-gray-600 hover:text-green-900 hover:bg-gray-50 rounded px-2">
+                Experience
+            </a>
+
+            <a href="research.html"
+               class="block py-2 text-green-900 font-bold hover:bg-green-50 rounded px-2">
+                Research
+            </a>
+
+            <a href="teaching.html"
+               class="block py-2 text-gray-600 hover:text-green-900 hover:bg-gray-50 rounded px-2">
+                Teaching
+            </a>
+
+            <a href="contact.html"
+               class="block py-2 text-gray-600 hover:text-green-900 hover:bg-gray-50 rounded px-2">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<main class="flex-grow max-w-4xl mx-auto px-6 py-16 w-full">
+
+    <!-- Page Heading -->
+    <h1 class="text-3xl font-serif font-bold text-gray-900 mb-8 border-b-2 border-green-900 pb-2 inline-block">
+        Research & Publications
+    </h1>
+
+
+    <!-- ================= RESEARCH INTERESTS ================= -->
+
+    <div class="mb-12">
+
+        <h2 class="text-xl font-serif font-bold text-gray-800 mb-4">
+            Research Interests
+        </h2>
+
+        <div class="flex flex-wrap gap-3">
+
+            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                Computer Vision
+            </span>
+
+            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                Object Tracking
+            </span>
+
+            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                Feature Fusion
+            </span>
+
+            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                Deep Learning Architectures
+            </span>
+
+            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                Medical Imaging & XAI
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- ACCEPTED CONFERENCE PAPERS -->
+    <!-- ================================================= -->
+
+    <div class="mb-12">
+
+        <h2 class="text-xl font-serif font-bold text-gray-800 mb-4">
+            Accepted Conference Papers
+        </h2>
+
+
+        <!-- WIECON-ECE 2026 -->
+
+        <article class="bg-white p-6 rounded shadow-sm border border-gray-100 mb-6 hover:shadow-md transition">
+
+            <span class="text-xs font-bold text-green-700 uppercase tracking-wide">
+                Accepted for Presentation
+            </span>
+
+
+            <h3 class="text-lg font-bold text-gray-900 mt-2 mb-2">
+                Explainable and Generalizable Birth Weight Prediction using Stacking Ensemble and SHAP Analysis
+            </h3>
+
+
+            <p class="text-gray-600 text-sm mb-4">
+                <strong class="font-semibold text-gray-800">
+                    Md. Shoab Alam
+                </strong>
+            </p>
+
+
+            <div class="text-sm text-gray-500 border-t pt-4 border-gray-100">
+
+                <p class="italic">
+                    12th IEEE International Women in Engineering (WIECON-ECE 2026)
+                </p>
+
+                <p>
+                    IEEE, 2026
+                </p>
+
+                <p class="text-gray-400 mt-1">
+                    Paper ID: 320
+                </p>
+
+            </div>
+
+
+            <div class="mt-4">
+
+                <span class="inline-flex items-center px-3 py-1
+                             bg-green-100 text-green-800
+                             text-xs font-semibold rounded-full">
+
+                    Accepted
+
+                </span>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- SELECTED PUBLICATIONS -->
+    <!-- ================================================= -->
+
+    <div>
+
+        <h2 class="text-xl font-serif font-bold text-gray-800 mb-4">
+            Selected Publications
+        </h2>
+
+
+        <!-- ================= PUBLICATION 1 ================= -->
+
+        <article class="bg-white p-6 rounded shadow-sm border border-gray-100 mb-6 hover:shadow-md transition">
+
+            <span class="text-xs font-bold text-green-700 uppercase tracking-wide">
+                Conference Paper
+            </span>
+
+
+            <h3 class="text-lg font-bold text-gray-900 mt-2 mb-2">
+                Improving Real-Time Object Tracking Through Adaptive Feature Fusion and Resampling in Particle Filters
+            </h3>
+
+
+            <p class="text-gray-600 text-sm mb-4">
+                Feroza Naznin,
+                <strong class="font-semibold text-gray-800">
+                    Md. Shoab Alam
+                </strong>,
+                Samia Alam Sathi,
+                Md. Zahidul Islam
+            </p>
+
+
+            <div class="text-sm text-gray-500 border-t pt-4 border-gray-100">
+
+                <p class="italic">
+                    HCI International 2024 Posters, Communications in Computer and Information Science, vol. 2120
+                </p>
+
+                <p>
+                    Springer, Cham, 2024
+                </p>
+
+            </div>
+
+
+            <a href="https://link.springer.com/chapter/10.1007/978-3-031-62110-9_12"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="inline-flex items-center mt-4 text-sm font-semibold text-green-900 hover:text-green-700 hover:underline">
+
+                View publication
+                <span class="ml-1">↗</span>
+
+            </a>
+
+        </article>
+
+
+        <!-- ================= PUBLICATION 2 ================= -->
+
+        <article class="bg-white p-6 rounded shadow-sm border border-gray-100 mb-6 hover:shadow-md transition">
+
+            <span class="text-xs font-bold text-green-700 uppercase tracking-wide">
+                Conference Paper
+            </span>
+
+
+            <h3 class="text-lg font-bold text-gray-900 mt-2 mb-2">
+                Enhanced CNN with Special Attention Module and Explainable AI for Advanced Skin Cancer Detection
+            </h3>
+
+
+            <p class="text-gray-600 text-sm mb-4">
+
+                M. K. B. Ahsan,
+                R. Goswami,
+                M. Obaidullah,
+                M. S. Mia and
+
+                <strong class="font-semibold text-gray-800">
+                    M. S. Alam
+                </strong>
+
+            </p>
+
+
+            <div class="text-sm text-gray-500 border-t pt-4 border-gray-100">
+
+                <p class="italic">
+                    2025 IEEE International Conference on Biomedical Engineering, Computer and Information Technology for Health (BECITHCON)
+                </p>
+
+                <p>
+                    IEEE, 2025
+                </p>
+
+            </div>
+
+
+            <a href="https://www.researchgate.net/publication/404672163_Enhanced_CNN_with_Special_Attention_Module_and_Explainable_AI_for_Advanced_Skin_Cancer_Detection"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="inline-flex items-center mt-4 text-sm font-semibold text-green-900 hover:text-green-700 hover:underline">
+
+                View publication
+                <span class="ml-1">↗</span>
+
+            </a>
+
+        </article>
+
+
+        <!-- ================= PUBLICATION 3 ================= -->
+
+        <article class="bg-white p-6 rounded shadow-sm border border-gray-100 mb-6 hover:shadow-md transition">
+
+            <span class="text-xs font-bold text-green-700 uppercase tracking-wide">
+                Conference Paper
+            </span>
+
+
+            <h3 class="text-lg font-bold text-gray-900 mt-2 mb-2">
+                A Retrieval-Grounded and Novelty-Aware Framework for Research Idea Generation Using Large Language Models
+            </h3>
+
+
+            <p class="text-gray-600 text-sm mb-4">
+
+                Md. Abdur Rahman,
+                Hazrat Ali,
+                Md. Ferdaus Hossen,
+                Md. Rajibul Palas,
+
+                <strong class="font-semibold text-gray-800">
+                    Md. Shoab Alam
+                </strong>,
+
+                Montaser Abdul Quader
+
+            </p>
+
+
+            <div class="text-sm text-gray-500 border-t pt-4 border-gray-100">
+
+                <p class="italic">
+                    IEEE International Conference on Quantum and Photonic AI Networks (QPAIN 2026)
+                </p>
+
+                <p>
+                    IEEE, 2026
+                </p>
+
+                <p class="text-gray-400 mt-1">
+                    Paper ID: 1860
+                </p>
+
+            </div>
+
+
+            <a href="https://www.researchgate.net/publication/406965854_A_Retrieval-Grounded_and_Novelty-Aware_Framework_for_Research_Idea_Generation_using_Large_Language_Models"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="inline-flex items-center mt-4 text-sm font-semibold text-green-900 hover:text-green-700 hover:underline">
+
+                View publication
+                <span class="ml-1">↗</span>
+
+            </a>
+
+        </article>
+
+
+        <!-- ================= PUBLICATION 4 ================= -->
+
+        <article class="bg-white p-6 rounded shadow-sm border border-gray-100 mb-6 hover:shadow-md transition">
+
+            <span class="text-xs font-bold text-green-700 uppercase tracking-wide">
+                Conference Paper
+            </span>
+
+
+            <h3 class="text-lg font-bold text-gray-900 mt-2 mb-2">
+                GRU-Based Time-Series Forecasting of Agricultural Commodity Prices Using Market and Climate Data
+            </h3>
+
+
+            <p class="text-gray-600 text-sm mb-4">
+
+                Arman Hossain,
+                Md. Rajibul Palas,
+                Montaser Abdul Quader,
+
+                <strong class="font-semibold text-gray-800">
+                    Md. Shoab Alam
+                </strong>,
+
+                Mozdaher Abdul Quader
+
+            </p>
+
+
+            <div class="text-sm text-gray-500 border-t pt-4 border-gray-100">
+
+                <p class="italic">
+                    IEEE International Conference on Quantum and Photonic AI Networks (QPAIN 2026)
+                </p>
+
+                <p>
+                    IEEE, 2026
+                </p>
+
+                <p class="text-gray-400 mt-1">
+                    Paper ID: 1332
+                </p>
+
+            </div>
+
+
+            <a href="https://ieeexplore.ieee.org/document/11546003/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="inline-flex items-center mt-4 text-sm font-semibold text-green-900 hover:text-green-700 hover:underline">
+
+                View publication
+                <span class="ml-1">↗</span>
+
+            </a>
+
+        </article>
+
+
+        <!-- ================= PUBLICATION 5 ================= -->
+
+        <article class="bg-white p-6 rounded shadow-sm border border-gray-100 mb-6 hover:shadow-md transition">
+
+            <span class="text-xs font-bold text-green-700 uppercase tracking-wide">
+                Conference Paper
+            </span>
+
+
+            <h3 class="text-lg font-bold text-gray-900 mt-2 mb-2">
+                A Transformer-Based Hybrid Framework for Early Detection of Depression and Suicidal Risk from Social Media Data
+            </h3>
+
+
+            <p class="text-gray-600 text-sm mb-4">
+
+                Md. Abdur Rahman,
+                Md. Ferdaus Hossen,
+                Hazrat Ali,
+                Md. Solaiman Mia,
+
+                <strong class="font-semibold text-gray-800">
+                    Md. Shoab Alam
+                </strong>
+
+            </p>
+
+
+            <div class="text-sm text-gray-500 border-t pt-4 border-gray-100">
+
+                <p class="italic">
+                    International Conference on Power, Electronics, Communications, Computing, and Intelligent Infrastructure (PECCII 2026)
+                </p>
+
+                <p>
+                    PUST, Pabna, Bangladesh, 17&ndash;18 June 2026
+                </p>
+
+            </div>
+
+
+            <a href="https://ieeexplore.ieee.org/abstract/document/11662014"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="inline-flex items-center mt-4 text-sm font-semibold text-green-900 hover:text-green-700 hover:underline">
+
+                View publication
+                <span class="ml-1">↗</span>
+
+            </a>
+
+        </article>
+
+    </div>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="bg-white border-t border-gray-200 py-8 text-center text-sm text-gray-500">
+
+    <p>
+        &copy; 2026 Md. Shoab Alam. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- ================= MOBILE MENU SCRIPT ================= -->
+
+<script>
+
+    const btn = document.getElementById("mobile-menu-btn");
+    const menu = document.getElementById("mobile-menu");
+
+    btn.addEventListener("click", function () {
+        menu.classList.toggle("hidden");
+    });
+
+</script>
+
+</body>
+</html>
