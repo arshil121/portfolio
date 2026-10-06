@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Personal Routine | Md. Shoab Alam</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .routine-table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 900px;
+        }
+
+        .routine-table th,
+        .routine-table td {
+            border: 1px solid #d1d5db;
+            padding: 14px 10px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .routine-table th {
+            background-color: #064e3b;
+            color: white;
+            font-weight: 600;
+        }
+
+        .day-cell {
+            background-color: #f0fdf4;
+            color: #064e3b;
+            font-weight: 700;
+        }
+
+        .class-cell {
+            background-color: white;
+        }
+
+        .class-cell:hover {
+            background-color: #f0fdf4;
+        }
+
+        .research-cell {
+            background-color: #f9fafb;
+            color: #4b5563;
+        }
+
+        .meeting-cell {
+            background-color: #ecfdf5;
+            color: #065f46;
+            font-weight: 600;
+        }
+
+        .free-cell {
+            background-color: #fafafa;
+            color: #9ca3af;
+        }
+
+        @media (max-width: 768px) {
+            .routine-wrapper {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+
+    <div class="max-w-6xl mx-auto px-6 py-4">
+
+        <div class="flex justify-between items-center">
+
+            <a href="index.html"
+               class="text-2xl font-serif font-bold text-green-900 tracking-tight">
+                Md. Shoab Alam
+            </a>
+
+            <!-- Desktop Navigation -->
+
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+
+                <a href="index.html"
+                   class="text-gray-600 hover:text-green-900 transition">
+                    Home
+                </a>
+
+                <a href="about.html"
+                   class="text-gray-600 hover:text-green-900 transition">
+                    About
+                </a>
+
+                <a href="experience.html"
+                   class="text-gray-600 hover:text-green-900 transition">
+                    Experience
+                </a>
+
+                <a href="research.html"
+                   class="text-gray-600 hover:text-green-900 transition">
+                    Research
+                </a>
+
+                <a href="teaching.html"
+                   class="text-gray-600 hover:text-green-900 transition">
+                    Teaching
+                </a>
+
+                <a href="routine.html"
+                   class="text-green-900 font-semibold transition">
+                    Routine
+                </a>
+
+                <a href="contact.html"
+                   class="px-5 py-2 bg-green-900 text-white rounded hover:bg-green-800 transition">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- Mobile Menu Button -->
+
+            <button id="mobile-menu-btn"
+                    class="md:hidden text-gray-600 focus:outline-none hover:text-green-900"
+                    aria-label="Open mobile menu">
+
+                <svg class="w-6 h-6"
+                     fill="none"
+                     stroke="currentColor"
+                     viewBox="0 0 24 24">
+
+                    <path stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+
+                </svg>
+
+            </button>
+
+        </div>
+
+
+        <!-- Mobile Navigation -->
+
+        <div id="mobile-menu"
+             class="hidden md:hidden mt-4 border-t border-gray-100 pt-4 pb-2 space-y-2">
+
+            <a href="index.html"
+               class="block py-2 text-gray-600 hover:text-green-900 hover:bg-gray-50 rounded px-2">
+                Home
+            </a>
+
+            <a href="about.html"
+               class="block py-2 text-gray-600 hover:text-green-900 hover:bg-gray-50 rounded px-2">
+                About
+            </a>
+
+            <a href="experience.html"
+               class="block py-2 text-gray-600 hover:text-green-900 hover:bg-gray-50 rounded px-2">
+                Experience
+            </a>
+
+            <a href="research.html"
+               class="block py-2 text-gray-600 hover:text-green-900 hover:bg-gray-50 rounded px-2">
+                Research
+            </a>
+
+            <a href="teaching.html"
+               class="block py-2 text-gray-600 hover:text-green-900 hover:bg-gray-50 rounded px-2">
+                Teaching
+            </a>
+
+            <a href="routine.html"
+               class="block py-2 text-green-900 font-bold hover:bg-green-50 rounded px-2">
+                Routine
+            </a>
+
+            <a href="contact.html"
+               class="block py-2 text-gray-600 hover:text-green-900 hover:bg-gray-50 rounded px-2">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<main class="flex-grow max-w-6xl mx-auto px-6 py-16 w-full">
+
+    <!-- Page Heading -->
+
+    <div class="mb-10">
+
+        <h1 class="text-3xl font-serif font-bold text-gray-900 mb-3">
+            Personal Routine
+        </h1>
+
+        <div class="w-20 h-1 bg-green-900 mb-5"></div>
+
+        <p class="text-gray-600">
+            Class and professional routine for the
+            <strong class="text-gray-800">Fall 2026 Semester</strong>.
+        </p>
+
+    </div>
+
+
+    <!-- ================= PROFILE CARD ================= -->
+
+    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <div>
+                <p class="text-xs uppercase tracking-wide text-gray-400 font-semibold">
+                    Name
+                </p>
+
+                <p class="text-lg font-semibold text-gray-900 mt-1">
+                    Md. Shoab Alam
+                </p>
+            </div>
+
+
+            <div>
+                <p class="text-xs uppercase tracking-wide text-gray-400 font-semibold">
+                    Position
+                </p>
+
+                <p class="text-lg font-semibold text-gray-900 mt-1">
+                    Lecturer
+                </p>
+            </div>
+
+
+            <div>
+                <p class="text-xs uppercase tracking-wide text-gray-400 font-semibold">
+                    Department
+                </p>
+
+                <p class="text-lg font-semibold text-gray-900 mt-1">
+                    Department of CSE
+                </p>
+            </div>
+
+
+            <div>
+                <p class="text-xs uppercase tracking-wide text-gray-400 font-semibold">
+                    University
+                </p>
+
+                <p class="text-lg font-semibold text-gray-900 mt-1">
+                    Green University of Bangladesh
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= ROUTINE ================= -->
+
+    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-5">
+
+        <div class="flex justify-between items-center mb-5">
+
+            <div>
+
+                <h2 class="text-xl font-serif font-bold text-gray-900">
+                    Fall 2026 Class Routine
+                </h2>
+
+                <p class="text-sm text-gray-500 mt-1">
+                    Saturday – Wednesday
+                </p>
+
+            </div>
+
+            <span class="hidden sm:inline-flex px-3 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full">
+                Fall 2026
+            </span>
+
+        </div>
+
+
+        <!-- Responsive Table -->
+
+        <div class="routine-wrapper overflow-x-auto">
+
+            <table class="routine-table text-sm">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Day
+                        </th>
+
+                        <th>
+                            08:30 – 10:00
+                        </th>
+
+                        <th>
+                            10:00 – 11:30
+                        </th>
+
+                        <th>
+                            11:30 – 01:00
+                        </th>
+
+                        <th>
+                            01:00 – 01:30
+                        </th>
+
+                        <th>
+                            01:30 – 03:00
+                        </th>
+
+                        <th>
+                            03:00 – 04:30
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <!-- SATURDAY -->
+
+                    <tr>
+
+                        <td class="day-cell">
+                            Sat
+                        </td>
+
+                        <td colspan="6" class="free-cell">
+                            —
+                        </td>
+
+                    </tr>
+
+
+                    <!-- SUNDAY -->
+
+                    <tr>
+
+                        <td class="day-cell">
+                            Sun
+                        </td>
+
+                        <td class="class-cell">
+
+                            <div class="font-semibold text-gray-900">
+                                Tutor Time
+                            </div>
+
+                        </td>
+
+                        <td class="class-cell">
+
+                            <div class="font-semibold text-gray-900">
+                                Tutor Time
+                            </div>
+
+                        </td>
+
+                        <td class="class-cell">
+
+                            <div class="font-bold text-green-900">
+                                CSE 103
+                            </div>
+
+                            <div class="text-xs text-gray-500 mt-1">
+                                260_D5
+                            </div>
+
+                            <div class="text-xs text-gray-500">
+                                H103
+                            </div>
+
+                        </td>
+
+                        <td class="free-cell">
+                            —
+                        </td>
+
+                        <td colspan="2" class="research-cell">
+
+                            <div class="font-semibold">
+                                Research Time
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- MONDAY -->
+
+                    <tr>
+
+                        <td class="day-cell">
+                            Mon
+                        </td>
+
+                        <td colspan="2" class="class-cell">
+
+                            <div class="font-bold text-green-900">
+                                CSE 436
+                            </div>
+
+                            <div class="text-xs text-gray-500 mt-1">
+                                Data Mining Lab
+                            </div>
+
+                            <div class="text-xs text-gray-500">
+                                A-508
+                            </div>
+
+                        </td>
+
+                        <td class="class-cell">
+
+                            <div class="font-semibold text-gray-900">
+                                Tutor Time
+                            </div>
+
+                        </td>
+
+                        <td class="free-cell">
+                            —
+                        </td>
+
+                        <td colspan="2" class="meeting-cell">
+
+                            Weekly AC Meeting
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- TUESDAY -->
+
+                    <tr>
+
+                        <td class="day-cell">
+                            Tue
+                        </td>
+
+                        <td colspan="2" class="class-cell">
+
+                            <div class="font-bold text-green-900">
+                                CSE 104
+                            </div>
+
+                            <div class="text-xs text-gray-500 mt-1">
+                                260_D1
+                            </div>
+
+                            <div class="text-xs text-gray-500">
+                                K102
+                            </div>
+
+                        </td>
+
+                        <td class="class-cell">
+
+                            <div class="font-semibold text-gray-900">
+                                Tutor Time
+                            </div>
+
+                        </td>
+
+                        <td class="free-cell">
+                            —
+                        </td>
+
+                        <td colspan="2" class="class-cell">
+
+                            <div class="font-bold text-green-900">
+                                CSE 104
+                            </div>
+
+                            <div class="text-xs text-gray-500 mt-1">
+                                260_D8
+                            </div>
+
+                            <div class="text-xs text-gray-500">
+                                K107
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- WEDNESDAY -->
+
+                    <tr>
+
+                        <td class="day-cell">
+                            Wed
+                        </td>
+
+                        <td colspan="2" class="class-cell">
+
+                            <div class="font-bold text-green-900">
+                                CSE 308
+                            </div>
+
+                            <div class="text-xs text-gray-500 mt-1">
+                                242_D2
+                            </div>
+
+                            <div class="text-xs text-gray-500">
+                                J103
+                            </div>
+
+                        </td>
+
+                        <td class="class-cell">
+
+                            <div class="font-bold text-green-900">
+                                CSE 103
+                            </div>
+
+                            <div class="text-xs text-gray-500 mt-1">
+                                260_D5
+                            </div>
+
+                            <div class="text-xs text-gray-500">
+                                K103
+                            </div>
+
+                        </td>
+
+                        <td class="free-cell">
+                            —
+                        </td>
+
+                        <td colspan="2" class="research-cell">
+
+                            <div class="font-semibold">
+                                Research Time
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= COURSE SUMMARY ================= -->
+
+    <div class="mt-8">
+
+        <h2 class="text-xl font-serif font-bold text-gray-900 mb-4">
+            Fall 2026 Teaching Schedule
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+            <!-- CSE 103 -->
+
+            <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm">
+
+                <p class="text-xs font-bold text-green-700 uppercase tracking-wide">
+                    CSE 103
+                </p>
+
+                <h3 class="font-bold text-gray-900 mt-2">
+                    Structured Programming
+                </h3>
+
+                <p class="text-sm text-gray-500 mt-2">
+                    Sunday & Wednesday
+                </p>
+
+            </div>
+
+
+            <!-- CSE 104 -->
+
+            <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm">
+
+                <p class="text-xs font-bold text-green-700 uppercase tracking-wide">
+                    CSE 104
+                </p>
+
+                <h3 class="font-bold text-gray-900 mt-2">
+                    Structured Programming Lab
+                </h3>
+
+                <p class="text-sm text-gray-500 mt-2">
+                    Tuesday
+                </p>
+
+            </div>
+
+
+            <!-- CSE 308 -->
+
+            <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm">
+
+                <p class="text-xs font-bold text-green-700 uppercase tracking-wide">
+                    CSE 308
+                </p>
+
+                <h3 class="font-bold text-gray-900 mt-2">
+                    Design Project I
+                </h3>
+
+                <p class="text-sm text-gray-500 mt-2">
+                    Wednesday
+                </p>
+
+            </div>
+
+
+            <!-- CSE 436 -->
+
+            <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm">
+
+                <p class="text-xs font-bold text-green-700 uppercase tracking-wide">
+                    CSE 436
+                </p>
+
+                <h3 class="font-bold text-gray-900 mt-2">
+                    Data Mining Lab
+                </h3>
+
+                <p class="text-sm text-gray-500 mt-2">
+                    Monday
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="bg-white border-t border-gray-200 py-8 text-center text-sm text-gray-500">
+
+    <p>
+        &copy; 2026 Md. Shoab Alam. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- ================= MOBILE MENU SCRIPT ================= -->
+
+<script>
+
+    const btn = document.getElementById("mobile-menu-btn");
+    const menu = document.getElementById("mobile-menu");
+
+    btn.addEventListener("click", function () {
+        menu.classList.toggle("hidden");
+    });
+
+</script>
+
+</body>
+</html>
